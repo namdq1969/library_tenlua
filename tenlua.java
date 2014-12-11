@@ -20,8 +20,8 @@ import org.apache.http.params.HttpParams;
  */
 public class tenlua {
     private final static String USER_AGENT = "Mozilla/5.0";
-    private final static String User = "mxc.top10@gmail.com";
-    private final static String Pass = "dungdoipass";
+    private final static String User = "";
+    private final static String Pass = "";
     private final static String Link_API = "http://api.tenlua.vn/";
     private final static String Link_API2 = "http://api2.tenlua.vn/";
     public static void main(String[] args) throws Exception 
@@ -125,7 +125,7 @@ public class tenlua {
        Return array link with info file
        Type return: name_file tenluasplit file_size tenluasplit link_file
     */
-    public static String[] get_link_folder(String link_folder) throws Exception
+    public static String[] get_list_link_in_folder(String link_folder) throws Exception
     {
         String[] array_link = {};
         if(link_folder.contains("folder"))
