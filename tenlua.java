@@ -18,7 +18,7 @@ import org.apache.http.params.HttpParams;
  * @version 1.0
  * @since 11/12/2014
  */
-public class tenlua {
+public class Tenlua {
     private final static String USER_AGENT = "Mozilla/5.0";
     private final static String User = "";
     private final static String Pass = "";
