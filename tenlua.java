@@ -24,10 +24,7 @@ public class Tenlua {
     private final static String Pass = "";
     private final static String Link_API = "http://api.tenlua.vn/";
     private final static String Link_API2 = "http://api2.tenlua.vn/";
-    public static void main(String[] args) throws Exception 
-    {
-        System.out.print("Library get link tenlua.vn Version 1.0 by Pham Quoc Thang. Copyright @ 2014");
-    }
+    
     /*
     Get ID From Link
     String link = "http://tenlua.vn/direct-downloader-rar-1337e32ce00f6f03/#download1337e32ce00f6f03";
@@ -46,6 +43,10 @@ public class Tenlua {
         else if(link.contains("download"))
         {
             splitstr = "/download/";
+        }
+        else
+        {
+       	    return "Wrong Format!";
         }
         String[] cat = link.split(splitstr);
         if(cat[1].contains("/"))
@@ -102,7 +103,7 @@ public class Tenlua {
         {
             fsize = filesize / 1024 / 1024 + " GB";
         }
-        return namefile + "tlsplit" + filesize + "tlsplit" + linkfile;
+        return namefile + "tlsplit" + fsize + "tlsplit" + linkfile;
     }
     /* Get Direct Link VIP
         String direct_link = get_link_file(link_file);
@@ -183,14 +184,6 @@ public class Tenlua {
         request.addHeader("User-Agent", USER_AGENT);
 
         HttpResponse response = client.execute(request);
-        BufferedReader rd = new BufferedReader(
-               new InputStreamReader(response.getEntity().getContent()));
-
-        StringBuffer result = new StringBuffer();
-        String line = "";
-        while ((line = rd.readLine()) != null) {
-                result.append(line);
-        }
 
         return result.toString();
     }
